@@ -148,7 +148,7 @@ class Translator(object):
         self._dev = torch.device("cuda", self._gpu) \
             if self._use_cuda else torch.device("cpu")
 
-        self.n_best = n_best
+        self.n_best = beam_size
         self.max_length = max_length
 
         self.beam_size = beam_size
